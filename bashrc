@@ -24,7 +24,7 @@ MYDIR="$( cd -P "$( dirname "${SOURCE}" )" && pwd )"
 function include_d {
   dir=${MYDIR}/${1}.d
   if [ -d ${dir} -a -r ${dir} -a -x ${dir} ]; then
-    for i in $(find ${dir}/ -name *.sh); do
+    for i in $(find ${dir}/ -name *.bash); do
       source ${i}
     done
   fi
