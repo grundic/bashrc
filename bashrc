@@ -46,9 +46,16 @@ HISTCONTROL=ignoreboth
 # append to the history file, don't overwrite it
 shopt -s histappend
 
+# Append commands to the history every time a prompt is shown,
+# instead of after closing the session.
+PROMPT_COMMAND='history -a'
+
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=10000
 HISTFILESIZE=20000
+
+# Set the default editor to vim.
+export EDITOR=vim
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
